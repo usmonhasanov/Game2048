@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Game2048 client</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="icon" type="img/ico" href="img/favicon.ico">
+</head>
+<body ng-app="gameApp" ng-controller="GameController as ctrl" ng-keydown="ctrl.KeyCode($event.keyCode)" ng-keyup="ctrl.KeyCodeup($event.keyCode)" >
+	<div class="container" > 
+    <div>
+      <div class = "name"> 2048 </div>
+      <div class = "scorediv">
+        <div class = "score"> Score <br/><div class = "text">{{ctrl.score}}</div></div>
+        <div class = "score" >Best  <br/><div class = "text" >{{ctrl.bestscore}}</div></div>
+      </div>
+      
+    </div>
+    <div>
+      <div class = "titlecontainer">    
+        <div class = "subtitle">Play 2048 Game Online</div>
+        <div class = "subtitlecomment">Join the numbers and get to the <b>2048 tile!</b></></div>
+      </div>
+      <div class = "newgame" ng-click = "ctrl.newGame()" >New Game</div>
+      <div class="both"></div>
+    </div>
+    <div class="game-container" 
+      ng-swipe-left="ctrl.Swipe(37)" 
+      ng-swipe-right="ctrl.Swipe(39)" 
+      ng-swipe-down="ctrl.Swipe(40)" 
+      ng-swipe-up="ctrl.Swipe(38)">
+      <div class="tile" 
+        ng-repeat="tile in ctrl.tiles track by $index" 
+        ng-class="ctrl.ClassName(tile.id);"
+        ng-style = "ctrl.style(tile.value)"
+        >
+        {{ tile.value }}
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/ngStorage.min.js"></script>
+  <script type="text/javascript" src="js/angular-swipe.js"></script>
+  <script type="text/javascript" src="js/game.js"></script>
+</body>
+</html>

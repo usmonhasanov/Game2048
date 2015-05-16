@@ -1,0 +1,115 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #faf8ef;
+  color: #776E65;;
+  font-family: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+}
+.container {
+  margin: 30px auto;
+  width: 450px;
+}
+.scorediv{
+  float: right;
+}
+.score{
+  float: left;
+  width: 120px;
+  margin: 5px;
+  padding: 5px;
+  background-color: rgb(187, 173, 160);
+  color: #EEE4D6;
+  border-radius: 5px;
+  text-align: center;
+}
+.newgame{
+  float: right;
+  margin: 5px;
+  padding-left: 10px;
+  width: 100px;
+  line-height: 30px;
+  height: 30px;
+  background-color: #8F7A66;
+  border: 1px solid #8F7A66;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.0em;
+  cursor: pointer;
+}
+.titlecontainer{
+  float: left;
+}
+.subtitle{
+  color: #776e65;
+  font-size: 1.0em;
+  font-weight: 500;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+.subtitlecomment{
+  color: #776e65;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding-left: 5px;
+}
+.both{
+  clear: both;
+}
+.name{
+  float:left;
+  margin: 0px;
+  padding-left: 10px;
+  font-size: 3.5em;
+  font-weight: bold;
+}
+.text{
+  font-size: 1.2em;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+.game-container {
+    width: 440px;
+    height: 440px;
+    background-color:#BBADA0;
+    border-radius: 8px;
+    padding : 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 0px;
+    float: left;
+    line-height: 100px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2.0em;
+    border: 0px solid #BBADA0;
+    border-radius: 4px;
+    background-color:#CCC0B3;
+}
+.animated { 
+    -webkit-animation-duration: 0.8s; 
+    animation-duration: 0.8s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+    -webkit-animation-name: bounceIn; 
+    animation-name: bounceIn; 
+} 
+
+@-webkit-keyframes bounceIn { 
+    0% { opacity: 0; -webkit-transform: scale(.8); } 
+    100% { -webkit-transform: scale(1); } 
+} 
+@keyframes bounceIn { 
+    0% { opacity: 0; transform: scale(.8); } 
+    100% { transform: scale(1); } 
+}
